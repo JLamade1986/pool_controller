@@ -1,0 +1,4 @@
+flask
+flask-mqtt
+paho-mqtt
+adafruit-circuitpython-ads1x15

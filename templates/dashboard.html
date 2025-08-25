@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Dashboard</h2>
+<div id="status">
+    <p>pH: <span id="ph">-</span></p>
+    <p>ORP: <span id="orp">-</span></p>
+    <p>Pumpe: <span id="pump">-</span></p>
+</div>
+<canvas id="chartPh" width="400" height="150"></canvas>
+<canvas id="chartOrp" width="400" height="150"></canvas>
+<script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+{% endblock %}
