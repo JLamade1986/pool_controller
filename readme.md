@@ -1,8 +1,10 @@
 🏊‍♂️ Smart Pool Controller
+
 Ein smarter Pool-Controller basierend auf Raspberry Pi 5, der pH-Wert, Redox (ORP), Temperatur überwacht und die Poolpumpe über einen Shelly Plus Plug S zeit- und sensorabhängig steuert.
 Zusätzlich gibt es ein modernes Web-Dashboard mit animierten Grafiken und eine MQTT-Anbindung.
 
 🚀 Features:
+
 📊 Live-Dashboard (pH, ORP, Temperatur, Pumpenstatus, Verbrauch)
 🕒 Zeitgesteuerte Pumpensteuerung (mehrere Zeitfenster über Web-UI konfigurierbar)
 ⚡ Integration von Shelly Plus Plug S (MQTT)
@@ -13,6 +15,7 @@ Zusätzlich gibt es ein modernes Web-Dashboard mit animierten Grafiken und eine 
 💾 Backup & Restore Funktion
 
 🧩 Hardware (Raspberry Pi 5 Variante)
+
 - Raspberry Pi 5 (empfohlen: 4–8 GB RAM Version)
 - Original Raspberry Pi 5 Netzteil (5V / 5A USB-C)
 - Raspberry Pi Chipsatzkühler Raspberry Pi Aktiv Kühler
@@ -27,25 +30,31 @@ Zusätzlich gibt es ein modernes Web-Dashboard mit animierten Grafiken und eine 
 
 
 📦 Installation
+
 Projekt herunterladen und entpacken:
 git clone https://github.com/<dein-user>/pool-controller.git
 cd pool-controller
 
 
 Installation starten:
+
 ./install.sh
 
 
 Systemdienst einrichten:
+
 sudo cp service/pool_controller.service /etc/systemd/system/
 sudo systemctl enable pool_controller.service
 sudo systemctl start pool_controller.service
 
 
 Weboberfläche öffnen:
+
 http://<raspi-ip>:5000
 
+
 ⚙️ Beispiel-Konfiguration (config/config.json)
+
 {
   "mqtt": {
     "broker": "192.168.1.245",
@@ -69,12 +78,16 @@ http://<raspi-ip>:5000
   }
 }
 
+
 📊 Dashboard Screenshots
+
 Übersicht
 Kalibrierung
 Pumpensteuerung
 
+
 🛠️ Wartungs- / Entwicklerinfos
+
 Python 3.11+
 Flask für Webserver
 MQTT via paho-mqtt
@@ -82,5 +95,7 @@ Charts via Chart.js
 TailwindCSS für modernes UI
 Systemd für Autostart
 
+
 📜 Lizenz
+
 MIT License – frei nutzbar für private & kommerzielle Projekte.
